@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { CircleUserRound, LogOut, Settings } from "lucide-react";
+import { CircleUserRound, LogOut, Settings, Zap } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 import {
   getUser,
@@ -87,7 +87,12 @@ export default function TopBar() {
       <Sheet open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
         <div className="bg-background text-foreground shadow-lg border-b border-border py-3 px-4 flex justify-between items-center">
           <div className="text-xl select-none">
-            <Link href={"/dashboard"}>Energify</Link>
+            <Link href={"/dashboard"}>
+              <div className="flex items-center gap-2 mb-2">
+                <Zap className="h-5 w-5 text-primary" />
+                <h1 className="text-xl font-bold tracking-tight">Energify</h1>
+              </div>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
